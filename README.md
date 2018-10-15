@@ -16,46 +16,9 @@ SweetAlert for Android, a beautiful and clever alert dialog
 
 Some screenshots of the new features:
 
-<img src="https://cloud.githubusercontent.com/assets/10178982/24260517/c6f72da6-0ffc-11e7-9a16-67fea4010a34.jpg" width="30%"/>
-
-<img src="https://user-images.githubusercontent.com/10178982/39063916-3a3db5ce-44d5-11e8-97bc-adb390c2f78a.jpg" width="30%"/>
-
 #### Known issues:
 - [ ] Bug with buttons height if custom view too big and need scrollview
 - [ ] Buttons can handle only one line strings
-
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Sweet%20Alert%20Dialog-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1065)
-
-[中文版](https://github.com/pedant/sweet-alert-dialog/blob/master/README.zh.md)
-
-Inspired by JavaScript [SweetAlert](http://tristanedwards.me/sweetalert)
-
-[Demo Download](https://github.com/F0RIS/sweet-alert-dialog/releases/download/1.5.3/sample-v1.5.3.apk)
-
-## ScreenShot
-![image](https://github.com/pedant/sweet-alert-dialog/raw/master/change_type.gif)
-
-## Setup
-The simplest way to use SweetAlertDialog is to add the library as aar dependency to your build.
-
-**Maven**
-
-    <dependency>
-      <groupId>com.github.f0ris.sweetalert</groupId>
-      <artifactId>library</artifactId>
-      <version>1.5.6</version>
-      <type>aar</type>
-    </dependency>
-
-**Gradle**
-
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        implementation 'com.github.f0ris.sweetalert:library:1.5.6'
-    }
 
 ## Usage
 
@@ -66,8 +29,6 @@ show material progress
     pDialog.setTitleText("Loading");
     pDialog.setCancelable(false);
     pDialog.show();
-
-![image](https://github.com/pedant/sweet-alert-dialog/raw/master/play_progress.gif)
 
 You can customize progress bar dynamically with materialish-progress methods via **SweetAlertDialog.getProgressHelper()**:
 - resetCount()
