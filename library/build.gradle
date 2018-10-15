@@ -6,12 +6,12 @@ group = GROUP
 
 publish {
 
-    def groupProjectID = 'vn.com.dialog'
+    def groupProjectID = 'com.github.langtubs'
     def artifactProjectID = 'sweet-alert-dialog'
     def publishVersionID = '0.0.1'
 
     userOrg = '{username_of_bintray}'
-    repoName = 'repository_name'
+    repoName = 'sweet-alert-dialog-custom'
     groupId = groupProjectID
     artifactId = artifactProjectID
     publishVersion = publishVersionID

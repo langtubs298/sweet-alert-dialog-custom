@@ -36,6 +36,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     private AnimationSet mSuccessLayoutAnimSet;
     private Animation mSuccessBowAnim;
     private TextView mTitleTextView;
+    private View mLineBreak;
     private TextView mContentTextView;
     private FrameLayout mCustomViewContainer;
     private View mCustomView;
@@ -167,6 +168,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
 
         mDialogView = getWindow().getDecorView().findViewById(android.R.id.content);
         mTitleTextView = (TextView) findViewById(R.id.title_text);
+        mLineBreak = (View) findViewById(R.id.lineBreak);
         mContentTextView = (TextView) findViewById(R.id.content_text);
         mCustomViewContainer = (FrameLayout) findViewById(R.id.custom_view_container);
         mErrorFrame = (FrameLayout) findViewById(R.id.error_frame);
@@ -177,7 +179,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         mSuccessLeftMask = mSuccessFrame.findViewById(R.id.mask_left);
         mSuccessRightMask = mSuccessFrame.findViewById(R.id.mask_right);
         mCustomImage = (ImageView) findViewById(R.id.custom_image);
-        mWarningFrame = (FrameLayout) findViewById(R.id.warning_frame);
+//        mWarningFrame = (FrameLayout) findViewById(R.id.warning_frame);
         mButtonsContainer = (LinearLayout) findViewById(R.id.buttons_container);
         mConfirmButton = (Button) findViewById(R.id.confirm_button);
         mConfirmButton.setOnClickListener(this);
@@ -204,7 +206,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         mCustomImage.setVisibility(View.GONE);
         mErrorFrame.setVisibility(View.GONE);
         mSuccessFrame.setVisibility(View.GONE);
-        mWarningFrame.setVisibility(View.GONE);
+//        mWarningFrame.setVisibility(View.GONE);
         mProgressFrame.setVisibility(View.GONE);
 
         mConfirmButton.setVisibility(mHideConfirmButton ? View.GONE : View.VISIBLE);
@@ -266,7 +268,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
                     break;
                 case WARNING_TYPE:
 //                    mConfirmButton.setBackgroundResource(R.drawable.red_button_background);
-                    mWarningFrame.setVisibility(View.VISIBLE);
+//                    mWarningFrame.setVisibility(View.VISIBLE);
                     break;
                 case CUSTOM_IMAGE_TYPE:
                     setCustomImage(mCustomImgDrawable);
@@ -274,6 +276,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
                 case PROGRESS_TYPE:
                     mProgressFrame.setVisibility(View.VISIBLE);
                     mConfirmButton.setVisibility(View.GONE);
+                    mLineBreak.setVisibility(View.GONE);
 //                    mButtonsContainer.setVisibility(View.GONE);
                     break;
             }
@@ -302,8 +305,10 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         if (mTitleTextView != null && mTitleText != null) {
             if (text.isEmpty()) {
                 mTitleTextView.setVisibility(View.GONE);
+                mLineBreak.setVisibility(View.GONE);
             } else {
                 mTitleTextView.setVisibility(View.VISIBLE);
+                mLineBreak.setVisibility(View.VISIBLE);
                 mTitleTextView.setText(Html.fromHtml(mTitleText));
             }
         }

@@ -91,25 +91,25 @@
 
         </FrameLayout>
 
-        <FrameLayout
-            android:id="@+id/warning_frame"
-            android:layout_width="53dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="5dp"
-            android:visibility="gone">
+        <!--<FrameLayout-->
+            <!--android:id="@+id/warning_frame"-->
+            <!--android:layout_width="53dp"-->
+            <!--android:layout_height="53dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:visibility="gone">-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/warning_circle" />
+            <!--&lt;!&ndash;<View&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/warning_circle" />&ndash;&gt;-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/app_name"
-                android:scaleType="center"
-                android:src="@drawable/warning_sigh" />
-        </FrameLayout>
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:contentDescription="@string/app_name"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:scaleType="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:src="@drawable/warning_sigh" />&ndash;&gt;-->
+        <!--</FrameLayout>-->
 
         <FrameLayout
             android:id="@+id/progress_dialog"
@@ -142,6 +142,13 @@
             tools:text="Title"
             tools:visibility="visible" />
 
+        <View
+            android:id="@+id/lineBreak"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="3dp"
+            android:background="#EAE9E9" />
 
         <TextView
             android:id="@+id/content_text"
