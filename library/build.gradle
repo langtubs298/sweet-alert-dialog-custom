@@ -1,24 +1,7 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
 
 version = VERSION_NAME
 group = GROUP
-
-publish {
-
-    def groupProjectID = 'com.github.langtubs'
-    def artifactProjectID = 'sweet-alert-dialog'
-    def publishVersionID = '0.0.1'
-
-    userOrg = '{username_of_bintray}'
-    repoName = 'sweet-alert-dialog-custom'
-    groupId = groupProjectID
-    artifactId = artifactProjectID
-    publishVersion = publishVersionID
-    desc = 'To custom sweet-alert-dialog'
-    website = 'https://github.com/langtubs298/sweet-alert-dialog-custom'
-
-}
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
